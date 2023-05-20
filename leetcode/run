@@ -1,0 +1,8 @@
+#!/bin/bash
+
+g++ $1 -o main
+
+if [ -a main ]
+then
+    ./main
+fi

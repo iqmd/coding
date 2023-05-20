@@ -1,0 +1,15 @@
+#+title: Notes
+#+author: Iqbal
+
+* Formatting with printf
+- %d is used for integers
+- %ld is written for long integers
+- you can give width to right adjust your output
+  like %3d.
+- to format floating point numbers use
+  - %`digits_before`.`digits_after_decimalpoint`f`
+  - %3.0f will print 3 digits without any point
+  - %3.2f will print 3 digits before and 2 digits after decimal point.
+* getchar() takes one character at a time and putchar() prints one character at a time.
+- we use int to store the the symbol `EOF` which is bigger than any char type.
+* Start from page 35
