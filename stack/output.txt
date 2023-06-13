@@ -1,0 +1,3 @@
+34 22 78 92 
+92 is popped from the stack.
+34 22 78 

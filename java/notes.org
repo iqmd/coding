@@ -1,0 +1,2 @@
+* Interface till java 7 does not allow any abstract methods but from java
+* 8 it also allows non-abstract method.
