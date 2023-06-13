@@ -80,7 +80,6 @@ int main() {
     struct Graph* graph;
     graph = adjMatrix();
 
-    /* printGraph(graph); */
     bfs(graph,1);
     return 0;
 }
