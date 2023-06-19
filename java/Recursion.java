@@ -1,4 +1,4 @@
-public class Main{
+public class Recursion{
     public static void main(String[] args){
         int arr[] = {4,3,2,1,8};
         recurse(0,arr);
