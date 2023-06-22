@@ -1,3 +1,4 @@
+import java.util.*;
 public class Test {
     public static void main(String args){
         Vehicle bike = new Bike();
@@ -17,7 +18,9 @@ public class Test {
         vehicle.add(bike);
         vehicle.add(Car);
 
-        Cloneable recbike = bike.clone();
+        Vehicle recbike = bike.clone();
+
+        record.add(recbike);
 
     }
 }

@@ -1,4 +1,4 @@
-public class Vehicle implements Cloneable{
+public abstract class Vehicle implements Cloneable{
     private int wheels;
     private int seats;
     private int average;
@@ -10,7 +10,7 @@ public class Vehicle implements Cloneable{
         wheels = w;
     }
     public int getSeats(){
-        return wheels;
+        return seats;
     }
 
     public void setSeats(int s){
@@ -24,8 +24,6 @@ public class Vehicle implements Cloneable{
         average = a;
     }
 
-    public Prototype clone(){
-        return new Vehicle(this);
-    }
+    abstract public Vehicle clone();
 
 }

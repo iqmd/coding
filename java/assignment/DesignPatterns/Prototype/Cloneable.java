@@ -1,3 +1,3 @@
 public interface Cloneable {
-    void clone();
+    Vehicle clone();
 }
