@@ -2,7 +2,7 @@ public class EmployeeController {
     public static void main(String args[]){
         EmployeeView view = new EmployeeView();
 
-        int basicPay = 40000;
+        int basicPay = Integer.parseInt(args[0]);
         //this should be in a util class
         Employee emp = new Employee();
         emp.setBasicPay(basicPay);
