@@ -1,13 +1,15 @@
-public abstract class Vehicle implements Cloneable{
+public  class Vehicle implements Cloneable{
     private int wheels;
     private int seats;
     private int average;
 
     Vehicle(){}
     Vehicle(Vehicle v){
-        v.wheels = this.wheels;
-        v.seats = this.seats;
-        v.average = this.average;
+        if(v != null){
+            this.wheels = v.wheels;
+            this.seats = v.seats;
+            this.average = v.average;
+        }
     }
 
     public int getWheels(){
@@ -31,6 +33,8 @@ public abstract class Vehicle implements Cloneable{
         average = a;
     }
 
-    abstract public Vehicle clone();
+    public Vehicle clone(){
+        return new Vehicle(this);
+    }
 
 }
