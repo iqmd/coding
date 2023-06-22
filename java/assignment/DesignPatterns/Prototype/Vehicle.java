@@ -3,6 +3,13 @@ public abstract class Vehicle implements Cloneable{
     private int seats;
     private int average;
 
+    Vehicle(){}
+    Vehicle(Vehicle v){
+        v.wheels = this.wheels;
+        v.seats = this.seats;
+        v.average = this.average;
+    }
+
     public int getWheels(){
         return wheels;
     }
