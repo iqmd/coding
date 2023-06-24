@@ -1,4 +1,3 @@
 public interface Speed {
-    double  getFerrari();
-    double  getBuggati();
+    double getSpeed(String str);
 }

@@ -1,12 +1,13 @@
-public class LuxuryCar implements Speed{
+public class LuxuryCar{
 
-    private double  Ferrari = 200.00;
-    private double  Buggati = 156.00;
+    private double Ferrari = 200;
+    private double Buggati = 156;
 
+    public double getBuggati(){
+        return this.Buggati;
+    }
     public double getFerrari(){
         return this.Ferrari;
     }
-    public double  getBuggati(){
-        return this.Buggati;
-    }
-} 
+    
+}
