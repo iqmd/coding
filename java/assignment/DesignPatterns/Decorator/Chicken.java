@@ -6,6 +6,6 @@ public class Chicken implements Pizza{
     }
 
     public String base(){
-        return pizza.base()+" Chicken";
+        return pizza.base()+" + Chicken";
     }
 }

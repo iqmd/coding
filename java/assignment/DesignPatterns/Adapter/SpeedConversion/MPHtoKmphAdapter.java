@@ -6,6 +6,6 @@ public class MPHtoKmphAdapter implements Speed {
     }
 
     public double getSpeed(String cars){
-        return mph.getSpeed(cars)*1.6;
+        return mph.getSpeed(cars)*1.60934;
     }
 }

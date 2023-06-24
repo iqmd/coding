@@ -6,6 +6,6 @@ public class Paneer implements Pizza{
     }
 
     public String base(){
-        return pizza.base()+" Paneer ";
+        return pizza.base()+" + Paneer ";
     }
 }
