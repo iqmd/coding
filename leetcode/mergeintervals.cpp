@@ -1,34 +1,30 @@
 #include<bits/stdc++.h>
-using namespace std;
+class Solution {
+public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        int n = intervals.size();
-        if(n==1) return intervals;
-        vector<vector<int>> ans;
-        vector<int> rslt;
-        rslt.push_back(intervals[0][0]);
-        rslt.push_back(*(intervals[0].end()-1));
-        int m=0;
+        sort(intervals.begin(),intervals.end());
+        vector<vector<int>> merged;
+        vector<int> last = intervals[0];
 
-        for(int i=1; i< intervals.size(); i++){
-               if(intervals[i][0] <= rslt[1]){
-                   rslt[1] = *(intervals[i].end()-1);
-               }else{
-                  ans.push_back(rslt);
-            rslt.push_back(intervals[i][0]);
-            rslt.push_back(*(intervals[i].end()-1));
-               } 
-            
+        for(int i = 1; i < intervals.size(); i++){
+
+            if(last[1] >= intervals[i][0]){
+                last = merge(last,intervals[i]);
+            }else{
+                merged.push_back(last);
+                last =  intervals[i];
+            }
         }
-        ans.push_back(rslt);
-        return ans;
-}
+        merged.push_back(last);
 
-int main(){
-    vector<vector<int>> a= {{1,3},{2,6},{8,10},{15,18}};
-    vector<vector<int>> b = {{1,4},{4,5}};
-    auto res = merge(a);
-    for(int i=0; i< res.size(); i++){
-        cout<<res[i][0]<<res[i][1]<<endl;
+        return merged;
     }
-}
-    
+
+    vector<int> merge(vector<int> first, vector<int> second){
+            if(first[1] >= second[1]){
+                return first;
+            }else{
+                return {first[0], second[1]};
+            }
+    }
+};
