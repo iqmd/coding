@@ -66,7 +66,7 @@ public class DP{
                 partial.add(a.get(i));
                 used[i] = true;
                 permute(a,partial,used);
-                partial.remove(a.get(i));
+                partial.remove(a.size()-1);
                 used[i] =false;
             }
            
