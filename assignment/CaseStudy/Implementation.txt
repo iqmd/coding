@@ -1,0 +1,9 @@
+Case Study Implementation:
+============================
+Create a Java based web application and use appropriate Design Patterns/OOPs Concepts where ever applicable.
+Implement the below functionalities in the above project:
+
+Online Shopping Application allows the customers to search products in the Online Portal. Admin shall add the products and users can able to view the list of products
+The core modules of online shopping app are:
+1. Admin to add the products
+2. Users to search the products

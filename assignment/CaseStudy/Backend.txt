@@ -1,0 +1,11 @@
+Backend Code Logic to be implemented:
+-------------------------------------
+1. Create a class for this ProductManagement user stories
+2. There should be three business methods
+3. One method should add the values to the map – which is add products method
+4. Second method should get all the products from the map
+5. Third method should get products by the name. Product name should be passed as the input parameter
+6. Follow proper naming conventions and standards
+7. Implement proper collection methods and iterators
+8. The package structure should have proper naming’s
+9. Use the latest IDE and latest Java versions

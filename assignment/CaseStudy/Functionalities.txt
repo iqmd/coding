@@ -1,0 +1,22 @@
+Business Functionalities are:
+-----------------------------
+1. Add new Products to the system:
+Detailed functionalities:
+------------------------
+As an admin I should be able to add products to the system.
+The below should be added as a Map.
+Map Key – Product name
+Map Value – Price
+
+Below are the details to be added
+• Product Name
+• Price
+
+2. View &Search Products:
+Detailed functionalities:
+-------------------------
+As a customer I should be able to view all the products and search any particular products as well
+
+Acceptance criteria:
+a. Customer can view all the existing products.
+b. Customer can search any particular products based on the product names
