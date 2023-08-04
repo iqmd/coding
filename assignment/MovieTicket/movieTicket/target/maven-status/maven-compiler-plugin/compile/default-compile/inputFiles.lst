@@ -1,2 +1,5 @@
-/home/atlas/coding/assignment/MovieTicket/movieTicket/src/main/java/com/movieTicket/Main.java
-/home/atlas/coding/assignment/MovieTicket/movieTicket/src/main/java/com/movieTicket/model/User.java
+/home/iqbal/coding/assignment/MovieTicket/movieTicket/src/main/java/com/movieTicket/model/Database.java
+/home/iqbal/coding/assignment/MovieTicket/movieTicket/src/main/java/com/movieTicket/model/User.java
+/home/iqbal/coding/assignment/MovieTicket/movieTicket/src/main/java/com/movieTicket/Main.java
+/home/iqbal/coding/assignment/MovieTicket/movieTicket/src/main/java/com/movieTicket/controller/Register.java
+/home/iqbal/coding/assignment/MovieTicket/movieTicket/src/main/java/com/movieTicket/controller/Login.java
