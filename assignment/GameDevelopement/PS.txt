@@ -1,0 +1,7 @@
+You are working on a game development project, and you need to implement a system for creating and managing different types of game characters. Implement the Prototype design pattern to create a flexible system for cloning and modifying game characters.
+
+Create an abstract base class GameCharacter that declares an abstract method clone to create a copy of the character. Implement concrete subclasses for different types of game characters: Warrior, Mage, and Archer.
+
+Each game character should have attributes like name, health, and attack power.
+
+Demonstrate how the Prototype design pattern can be used to clone and modify game characters in your application.
