@@ -1,4 +1,7 @@
-public class Latte implements Coffee{
+public class Latte extends Coffee{
+    Latte(){
+        description="";
+    }
     public String getDescription(){
         return "Latte";
     }
