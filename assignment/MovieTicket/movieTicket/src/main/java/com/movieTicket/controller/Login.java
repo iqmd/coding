@@ -2,7 +2,11 @@ package com.movieTicket.controller;
 import com.movieTicket.model.*;
 
 public class Login {
-    private User user;
+
+    Database database;
+    Login(Database database){
+        this.database = database;
+    }
 
 
 }
