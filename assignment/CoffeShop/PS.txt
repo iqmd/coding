@@ -1,0 +1,26 @@
+You are developing a system for a coffee shop that allows customers to order different types of coffee with various add-ons. Implement the Decorator design pattern to create a flexible and extensible system for handling coffee orders.
+
+Your base coffee class should have the following properties and methods:
+
+abstract class Coffee {
+String description;
+
+abstract double cost();
+
+String getDescription() {
+return description;
+}
+}
+
+
+You should have three types of coffee:
+
+Espresso: A basic espresso coffee costs $2.50.
+Latte: A latte is a coffee with milk. It costs $3.50.
+Cappuccino: A cappuccino is a coffee with equal parts of espresso, milk, and frothed milk. It costs $4.00.
+Additionally, you should have three add-ons:
+
+Milk: Adding milk to the coffee costs $0.50.
+Whipped Cream: Adding whipped cream to the coffee costs $1.00.
+Caramel: Adding caramel to the coffee costs $1.50.
+Implement the decorator classes for each add-on and coffee types, and demonstrate how you can create different coffee orders with different combinations of add-ons.
