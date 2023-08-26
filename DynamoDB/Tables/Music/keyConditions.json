@@ -1,0 +1,21 @@
+{
+    "Artist": {
+        "AttributeValueList":[
+            {
+                "S" : "Cupid"
+            }
+        ],
+        "ComparisonOperator" : "EQ"
+    },
+
+    "SongTitle": {
+        "AttributeValueList":[
+            {
+                "S" : "Fifty Fifty"
+            }
+        ],
+        "ComparisonOperator" : "EQ"
+    }    
+
+}
+
