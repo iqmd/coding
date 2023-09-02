@@ -15,13 +15,13 @@ public class PutItem {
     public void putItem(){
 
 
-        Table table = dynamoDB.getTable("Books");
+        Table table = dynamoDB.getTable("Products");
         Item item = new Item();
         String answer="y";
         String key;
         String value;
 
-        System.out.println("Set the primary Key ");
+        System.out.println("primaryKey ");
         key = read.nextLine();
         System.out.println("Set the primary Key value ");
         value = read.nextLine();

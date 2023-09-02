@@ -1,0 +1,18 @@
+{
+    "TableName": "OrdersTable",
+    "Item": {
+        "OrderId": {
+            "S": "Order003"
+        },
+        "UserId": {
+            "S": "U007"
+        },
+        "Product": {
+            "S": "Apple"
+        },
+        "Quantity": {
+            "N": "1"
+        }
+
+    }
+}

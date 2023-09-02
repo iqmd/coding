@@ -1,0 +1,20 @@
+{
+    "TableName": "Products",
+    "Item": {
+        "ProductID": {
+            "S": "P006"
+        },
+        "Name": {
+            "S": "MacBook"
+        },
+        "Brand": {
+            "S": "Apple"
+        },
+        "Quantity": {
+            "N": "5"
+        },
+        "Price": {
+            "N": "150000"
+        }
+    }
+}

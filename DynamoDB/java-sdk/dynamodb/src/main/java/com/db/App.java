@@ -8,7 +8,12 @@ public class App {
        Scanner read = new Scanner(System.in);
        String answer = "y";
        PutItem newItem = new PutItem();
+       // CreateTable cre = new CreateTable();
+
+       // cre.generateTable();
+
        while(answer.equals("y")){
+
            newItem.putItem();
            System.out.println("Do you want to add more item ?");
            answer = read.nextLine();

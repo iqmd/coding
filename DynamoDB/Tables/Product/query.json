@@ -1,0 +1,14 @@
+{
+    "TableName": "Products",
+    "IndexName": "PriceIndex",
+    "KeyConditions": {
+        "Price": {
+            "AttributeValueList": [
+                {
+                    "N": "20000"
+                }
+            ],
+            "ComparisonOperator": "GT"
+        }
+    }
+}

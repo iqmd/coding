@@ -1,0 +1,11 @@
+{
+    "ProductID": {
+        "AttributeValueList": [
+            {   
+                "S": "P002",
+                "S": "P004"
+            }   
+        ],  
+        "ComparisonOperator": "EQ"
+    }  
+}

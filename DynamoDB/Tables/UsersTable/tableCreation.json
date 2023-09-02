@@ -1,0 +1,21 @@
+{
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "UserId",
+            "AttributeType": "S"
+        }
+
+    ],
+    "TableName": "UsersTable",
+    "KeySchema": [
+        {
+            "AttributeName": "UserId",
+            "KeyType": "HASH"
+        }
+    ],
+    "BillingMode": "PROVISIONED",
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+    }
+}

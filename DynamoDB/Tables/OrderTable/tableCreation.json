@@ -1,0 +1,29 @@
+{
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "OrderId",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "UserId",
+            "AttributeType": "S"
+        }
+
+    ],
+    "TableName": "OrdersTable",
+    "KeySchema": [
+        {
+            "AttributeName": "OrderId",
+            "KeyType": "HASH"
+        },
+        {
+            "AttributeName": "UserId",
+            "KeyType": "RANGE"
+        }
+    ],
+    "BillingMode": "PROVISIONED",
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+    }
+}

@@ -71,8 +71,9 @@ public class CreateTable{
 
     public ProvisionedThroughput setProvisionedThroughput(){
         ProvisionedThroughput ps = new ProvisionedThroughput();
-        ps.withReadCapacityUnits(5L);
-        ps.withWriteCapacityUnits(5L);
+        long c = 5;
+        ps.withReadCapacityUnits(c);
+        ps.withWriteCapacityUnits(c);
         return ps;
 
     }

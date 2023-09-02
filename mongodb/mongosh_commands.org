@@ -1,0 +1,6 @@
+#+title: Mongosh Commands
+
+* To show databases
++ show dbs
+* To crate a db or use a db
++ use employeedb
