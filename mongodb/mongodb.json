@@ -1,0 +1,69 @@
+/*db.books.insertMany(
+    [{
+            Title: "Sapiens",
+            Author: "YNH",
+            Description: "A book about history",
+            TextScore: 23
+        },
+        {
+            Title: "A man called Ove",
+            Author: "Fredrix Backman",
+            Description: "A story about a man",
+            TextScore: 230
+        },
+        {
+            Title: "Harry Potter",
+            Author: "JK Rowling",
+            Description: "Magic book with Adventure",
+            TextScore: 450
+        },
+        {
+            Title: "Power of Now",
+            Author: "someone",
+            Description: "about something",
+            TextScore: 900
+        },
+        {
+            Title: "Adventure",
+            Author: "sometwo",
+            Description: "about something",
+            TextScore: 76
+        }
+    ]
+)
+db.books.createIndex({
+    "Title": "text",
+    "Description": "text"
+})
+db.books.find({
+    $text: {
+        $search: "Adventure"
+    }
+})
+
+db.books.createIndex({
+    "Text Score": -1
+})
+db.events.insertMany([{
+        eventName: "evnt7",
+        eventDate: new Date() + 25,
+        createdAt: new Date()
+    },
+    {
+        eventName: "evnt8",
+        eventDate: new Date() + 25,
+        createdAt: new Date()
+    },
+    {
+        eventName: "evnt9",
+        eventDate: new Date() + 25,
+        createdAt: new Date()
+    }
+
+])
+db.events.createIndex({
+    "createdAt": 1
+}, {
+    expireAfterSeconds: 120
+})
+*/

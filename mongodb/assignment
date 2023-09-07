@@ -1,0 +1,8 @@
+Task 1: Efficient Text Search Index
+Problem: You have a collection named "articles" with a large number of documents containing text content. Your application frequently performs text searches on the "content" field to find articles matching specific keywords. Optimize the collection for efficient text searches.
+
+Task 2: Sorting by Date
+Problem: You have a collection named "events" that stores events with a "date" field. Your application frequently retrieves events and sorts them by date in ascending order. Optimize the collection for efficient sorting by date.
+
+Task 3: Compound Index for Query and Sort
+Problem: You have a collection named "orders" that stores customer orders with fields "customer_id" and "order_date." Your application frequently queries for orders by "customer_id" and sorts them by "order_date" in descending order. Optimize the collection for this query.
