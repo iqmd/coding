@@ -1,0 +1,8 @@
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/javav2/example_code/dynamodb/src/main/java/com/example/dynamodb/UpdateItem.java
+
+2.https://www.mongodb.com/docs/drivers/java/sync/current/
+3.https://www.mongodb.com/docs/manual/reference/operator/update/pull/
+4.https://stackoverflow.com/questions/49584703/mongodb-update-all-document-with-incrementing-the-value-by-1
+5.https://www.mongodb.com/docs/
+6.https://www.mongodb.com/docs/manual/reference/operator/aggregation/meta/
+
