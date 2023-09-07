@@ -1,3 +1,0 @@
-#!/bin/bash
-set +xe
-mvn exec:java -Dexec.mainClass=$1  -Dexec.args=$2

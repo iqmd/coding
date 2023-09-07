@@ -1,5 +1,0 @@
-com/db/App.class
-com/db/DeleteTable.class
-com/db/DynamoDBInstance.class
-com/db/PutItem.class
-com/db/CreateTable.class
