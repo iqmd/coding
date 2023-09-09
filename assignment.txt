@@ -1,0 +1,1 @@
+Implement a Trie data structure to efficiently store a large set of words. Develop an autocomplete feature that suggests words based on user input. Optimize the autocomplete algorithm for speed and memory usage
