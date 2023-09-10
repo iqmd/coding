@@ -1,0 +1,4 @@
+#+title: Tries
+
+* Goal of tries
++ Faster than hashing , more flexibel than BSTs
