@@ -1,1 +1,1 @@
-Implement a Trie data structure to efficiently store a large set of words. Develop an autocomplete feature that suggests words based on user input. Optimize the autocomplete algorithm for speed and memory usage
+Create a graph representation to model a social network. Implement algorithms such as finding shortest paths, calculating centrality measures, and detecting communities within the network. Apply these algorithms to analyse relationships and connections in the social network. 
