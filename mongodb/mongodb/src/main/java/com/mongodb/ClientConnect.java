@@ -18,28 +18,29 @@ public class ClientConnect {
         String connectionString = "mongodb+srv://newme:newpass@cluster0.asnmcoi.mongodb.net/?retryWrites=true&w=majority";
         String connectionLocalString = "mongodb://localhost:27017";
 
-        ServerApi serverApi = ServerApi.builder()
-                .version(ServerApiVersion.V1)
-                .build();
+        // ServerApi serverApi = ServerApi.builder()
+        //         .version(ServerApiVersion.V1)
+                // .build();
 
-        MongoClientSettings settings = MongoClientSettings.builder()
-                .applyConnectionString(new ConnectionString(connectionString))
-                .serverApi(serverApi)
-                .build();
+        // MongoClientSettings settings = MongoClientSettings.builder()
+        //         .applyConnectionString(new ConnectionString(connectionString))
+        //         .serverApi(serverApi)
+        //         .build();
 
         // Create a new client and connect to the server
-        try (MongoClient mongoClient = MongoClients.create(settings)) {
+        try (MongoClient mongoClient = MongoClients.create(connectionString)) {
             try {
-                MongoDatabase database = mongoClient.getDatabase("javaDatabase");
-                MongoCollection<Document> collection = database.getCollection("products");
-                FindIterable<Document> docs = collection.find();
-                for(Document doc:docs){
-                    System.out.println(doc.toJson());
-                }
+                // MongoDatabase database = mongoClient.getDatabase("javaDatabase");
+                // MongoCollection<Document> collection = database.getCollection("locations");
+                // FindIterable<Document> docs = collection.find();
+                // for(Document doc:docs){
+                //     System.out.println(doc.toJson());
+                // }
                 InsertDocument insertDoc = new InsertDocument(mongoClient);
-                insertDoc.addDocument();
-                CreateIndex ci = new CreateIndex(mongoClient);
-                ci.wildCardIndex();
+                // insertDoc.addDocument();
+                // CreateIndex ci = new CreateIndex(mongoClient);
+                // ci.textIndex();
+                insertDoc.aggregation();
             } catch (MongoException e) {
                 e.printStackTrace();
             }

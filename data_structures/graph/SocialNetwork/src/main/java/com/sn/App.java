@@ -1,25 +1,22 @@
 package com.sn;
 
+import java.util.Scanner;
 
 public class App
 {
     public static void main( String[] args )
     {
         Network network = new Network();
-        int i = 0;
-        while(i < 5){
-            network.takeUser();
-            i++;
-        }
+        Scanner read = new Scanner(System.in);
+        String answer = "y";
 
-        i=0;
-
-        while( i < 3){
+        while(answer.equals("y")){
             network.addFriend();
-            i++;
+            System.out.println("Do you want to add more ?(y/n)");
+            answer = read.nextLine();
         }
 
-        network.display("otis");
+        network.display("0");
 
     }
 }

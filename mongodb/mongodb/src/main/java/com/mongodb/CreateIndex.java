@@ -14,6 +14,7 @@ public class CreateIndex {
     MongoCollection<Document> collection;
 
 
+
     public CreateIndex(MongoClient mongoclient){
         this.mongoclient = mongoclient;
     }
@@ -24,17 +25,28 @@ public class CreateIndex {
     }
 
     public void wildCardIndex(){
-
-        setup("javaDatabase", "products");
         String resultCreateIndex = collection.createIndex(Indexes.ascending("*_description"));
         System.out.println(String.format("Index created: %s", resultCreateIndex));
 
     }
 
     public void sphereIndex(){
-        setup("javaDatabase", "places");
-        String resultCreateIndex = collection.createIndex(Indexes.geo2dsphere("location"));
+        setup("javaDatabase", "locations");
+        String resultCreateIndex = collection.createIndex(Indexes.geo2dsphere("geometry.features.geometry"));
         System.out.println(String.format("Index created: %s", resultCreateIndex));
+    }
+
+    public void compoundIndex(){
+        setup("javaDatabase", "products");
+        String resultCreateIndex = collection.createIndex(Indexes.ascending("type","rating"));
+        System.out.println(String.format("Index created: %s", resultCreateIndex));
+    }
+
+    public void textIndex(){
+        setup("javaDatabase", "books");
+        String resultCreateIndex = collection.createIndex(Indexes.text("longDescription"));
+        System.out.println(String.format("Index created: %s", resultCreateIndex));
+
     }
 
 }

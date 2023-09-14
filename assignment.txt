@@ -1,1 +1,7 @@
-Create a graph representation to model a social network. Implement algorithms such as finding shortest paths, calculating centrality measures, and detecting communities within the network. Apply these algorithms to analyse relationships and connections in the social network. 
+Create a graph representation to model a social network. Implement algorithms such as finding shortest paths, calculating centrality measures, and detecting communities within the network. Apply these algorithms to analyse relationships and connections in the social network.
+Assignment 3: Advanced Sorting Algorithms
+
+Implement advanced sorting algorithms like Merge Sort, Quick Sort, and Heap Sort from scratch. Compare their efficiency in terms of time complexity and memory usage. Consider scenarios where each algorithm performs well and discuss the trade-offs.
+Assignment 4: Dynamic Programming for Optimization
+
+Solve a well-known optimization problem using dynamic programming, such as the Knapsack Problem or Longest Common Subsequence. Implement the solution using both top-down (recursive with memorization) and bottom-up (iterative) approaches. Analyse the time and space complexity of each approach
