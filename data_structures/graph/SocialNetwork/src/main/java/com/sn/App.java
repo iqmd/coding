@@ -16,7 +16,8 @@ public class App
             answer = read.nextLine();
         }
 
-        network.display("0");
+        network.findCommunities();
+        read.close();
 
     }
 }

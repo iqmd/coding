@@ -8,4 +8,8 @@ public class User {
     String username;
     ArrayList<User> friends = new ArrayList<>() ;
 
+    public String toString(){
+        return name;
+    }
+
 }
