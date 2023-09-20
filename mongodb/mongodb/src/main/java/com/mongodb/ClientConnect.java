@@ -13,7 +13,7 @@ public class ClientConnect {
         String answer = "y";
         String input;
         // Create a new client and connect to the server
-        try (MongoClient mongoClient = MongoClients.create(connectionString)) {
+        try (MongoClient mongoClient = MongoClients.create(connectionLocalString)) {
                 try {
                     BlogPosts bp = new BlogPosts(mongoClient);
 

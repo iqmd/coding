@@ -1,11 +1,7 @@
 package com.mongodb;
 
 
-import java.net.PasswordAuthentication;
-import java.nio.file.DirectoryStream.Filter;
-import java.sql.Date;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -15,8 +11,6 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.Indexes;
-import com.mongodb.client.model.Projections;
 import com.mongodb.client.model.Updates;
 import com.mongodb.client.result.InsertOneResult;
 
@@ -151,8 +145,8 @@ public class BlogPosts {
                 if(results.size() != 0){
                     System.out.println("Enter the post number ?");
                     input = Integer.parseInt(read.nextLine());
-                    System.out.println(results);
-                    Document postid = (Document)results.get(input).get("blog");
+                    // System.out.println(results);
+                    Document postid = (Document)results.get(input-1).get("blog");
                     ObjectId id = (ObjectId)postid.get("blog_id");
                     comment(id);
                 }else{
@@ -184,6 +178,8 @@ public class BlogPosts {
         String post;
         Bson filter = Filters.eq("UserId",loggedin);
         Bson blogid = Filters.eq("blog.blog_id",id);
+        Document newfilter = new Document("blog.blog_id", id);
+        System.out.println(id);
         Document author = collection.find(filter).first();
         Document blogpost = collection.find(blogid).first();
         Document comment = new Document();
@@ -192,8 +188,9 @@ public class BlogPosts {
         System.out.println(blogpost.toJson());
         comment.append("author",author.get("UserName"));
         comment.append("comment",post);
-        Bson update= Updates.push("log",comment);
-        collection.updateOne(blogpost, update);
+        Document update = new Document("$set", new Document("blog.comment", comment));
+        // Bson update= Updates.push("blog",comment);
+        collection.updateOne(newfilter, update);
 
     }
 
