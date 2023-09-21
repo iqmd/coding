@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>employee</groupId>
-  <artifactId>employee</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <groupId>Library</groupId>
+  <artifactId>Library</artifactId>
+  <version>library</version>
 
-  <name>employee</name>
+  <name>Library</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -22,14 +22,13 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13.2</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.9.1</version>
-        <scope>test</scope>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongodb-driver-sync</artifactId>
+      <version>4.10.2</version>
     </dependency>
   </dependencies>
 
@@ -53,11 +52,6 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
-          <configuration>
-          <includes>
-            <include>EmployeeTesting.java</include>
-          </includes>
-        </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

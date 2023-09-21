@@ -6,8 +6,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class EmployeeTesting
-{
+public class EmployeeTesting{
 
 
     @Test
@@ -29,5 +28,6 @@ public class EmployeeTesting
         assertEquals(1142400,es.deductTax(),0);
 
     }
+
 
 }

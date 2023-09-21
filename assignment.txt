@@ -5,3 +5,6 @@ Implement advanced sorting algorithms like Merge Sort, Quick Sort, and Heap Sort
 Assignment 4: Dynamic Programming for Optimization
 
 Solve a well-known optimization problem using dynamic programming, such as the Knapsack Problem or Longest Common Subsequence. Implement the solution using both top-down (recursive with memorization) and bottom-up (iterative) approaches. Analyse the time and space complexity of each approach
+
+
+Implement search algorithms like Breadth-First Search (BFS) and A* Search to solve puzzles like the sliding tile puzzle or the N-Puzzle. Visualize the search process step by step and compare the efficiency of different search strategies.

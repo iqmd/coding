@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: employee.AppTest
+Test set: com.test.AdditionTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s - in employee.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s - in com.test.AdditionTest
