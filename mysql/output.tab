@@ -1,0 +1,20 @@
+order_id	first_name	last_name	email
+900	Sheldon	Cooper	shelly@gmail.com
+906	Sheldon	Cooper	shelly@gmail.com
+910	Sheldon	Cooper	shelly@gmail.com
+902	Raj	Koothrapalli	astro@gmail.com
+911	Raj	Koothrapalli	astro@gmail.com
+901	Leonard	Hofstader	leo@gmail.com
+905	Leonard	Hofstader	leo@gmail.com
+909	Leonard	Hofstader	leo@gmail.com
+912	Leonard	Hofstader	leo@gmail.com
+903	Jean	Milburn	jeany@gmail.com
+904	Jean	Milburn	jeany@gmail.com
+907	Jean	Milburn	jeany@gmail.com
+908	Mark	Rober	rob@gmail.com
+first_name	last_name	revenue
+Sheldon	Cooper	15146
+Leonard	Hofstader	14734
+Jean	Milburn	10500
+Raj	Koothrapalli	1267
+Mark	Rober	121
