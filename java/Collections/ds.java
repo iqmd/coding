@@ -52,7 +52,7 @@ class ds{
 
 
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>(arr);
         list.add(1);
         list.add(2);
         list.add(2);
