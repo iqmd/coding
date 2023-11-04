@@ -30,33 +30,30 @@ public class Tree {
     Node root = null;
 
     public void add(int data){
+
         if(root == null){
             root = new Node(data);
         }else if(!bst){
-            Node newNode = addNode(root);
-            newNode.data = data;
+            addNode(root,data);
         }else{
-           bst(data,root);
+           root = bst(data,root);
         }
     }
 
-    public void bst(int data,Node root){
+    public Node bst(int data,Node root){
+        if(root == null){
+            return new Node(data);
+        }
         if(root.data < data){
-            if(root.right == null){
-                root.right = new Node(data);
-            }else{
-                bst(data,root.right);
-            }
+            root.right = bst(data,root.right);
         }else{
-            if(root.left == null){
-                root.left = new Node(data);
-            }else{
-                bst(data,root.left);
-            }
+            root.left = bst(data,root.left);
         }
+        return root;
     }
 
-    private Node addNode(Node root){
+
+    private void addNode(Node root,int data){
         Queue<Node> queue = new LinkedList<>();
 
         queue.add(root);
@@ -65,34 +62,33 @@ public class Tree {
             Node node = queue.poll();
 
             if(node.left == null){
-                node.left = new Node();
-                return node.left;
+                node.left = new Node(data);
+                break;
             }else{
                 queue.add(node.left);
             }
 
             if(node.right == null){
-                node.right = new Node();
-                return node.right;
+                node.right = new Node(data);
+                break;
             }else{
                 queue.add(node.right);
             }
         }
-        return null;
     }
 
     public void print(){
-        traverse(root);
+        traverse(root,0);
     }
 
-    private void traverse(Node root){
+    private void traverse(Node root,int l){
         if(root == null){
             return;
         }
 
-        traverse(root.left);
-        System.out.println(root.data);
-        traverse(root.right);
+        traverse(root.left,l+1);
+        System.out.println(root.data+" level :"+l);
+        traverse(root.right,l+1);
     }
 
 }
