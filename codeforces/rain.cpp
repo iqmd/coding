@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include <climits>
+#include <string>
 using namespace std;
 using ll = int64_t;
 
@@ -7,32 +9,45 @@ using ll = int64_t;
 
 #define debug(x) cerr << x <<" "
 
-void run_case(){
-    int n, ans;
-    cin >> n;
-    vector<int> a(n+2);
-    a[0] = INT_MAX;
-    a[n+1] = INT_MAX;
+int findPoss(string str , char c, int i, int n){
+    if( n == 3){
+        return 1;
+    }
 
-    for (int i = 1; i <=n; i++) {
-       cin >> a[i];
+    int count = 0;
+    for(int j = i+1; j < str.size(); j++){
+        if(str[j] != c)
+            count += findPoss(str, str[j], j, n+1);
     }
-    int maxwater = 0;
-    for(int j=1; j <=n; j++){
-        int l, r;
-        l = r = j;
-        int water = 1;
-        while(a[l-1] <= a[l]){
-            l--;
-            water++;
-        }
-        while(a[r+1] <= a[r]){
-            r++;
-            water++;
-        }
-        maxwater = max(maxwater, water);
+
+    return count;
+
+}
+
+void run_case(){
+    string a,b;
+    cin>>a;
+    cin>>b;
+
+    int count = 0;
+    int maxcount = INT_MIN;
+    for(int i=0; i < a.size(); i++){
+        count += findPoss(a,a[i],i,1);
     }
-    cout << ans <<"\n";
+
+    maxcount = count;
+    cout <<count<<endl;
+    count = 0;
+
+    for(int i=0; i < b.size(); i++){
+        count += findPoss(b,b[i],i,1);
+    }
+
+    maxcount = max(maxcount,count);
+
+    cout<< maxcount <<endl;
+
+
 
 }
 
