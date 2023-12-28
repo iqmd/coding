@@ -41,21 +41,9 @@ int main() {
   freopen("output.txt", "w", stdout);
 #endif
 
-  string s;
-  vector<int> time;
+  int n, k, target;
 
-  cin >> s;
-
-  int e;
-  while(cin >> e ){
-    time.push_back(e);
-  }
-
-  Solution sol;
-
-  int result  = sol.minCost(s, time);
-
-  cout <<  result << endl;
-
+  cin >> n >> k >> target;
+  cout << n << "," << k << "," << target << endl;
   return 0;
 }

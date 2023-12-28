@@ -1,18 +1,20 @@
-#include <deque>
 #include <iostream>
-#include <queue>
-#include <stack>
+#include <vector>
 
 using namespace std;
 
+int fib(int n){
+    if(n <= 1) return n;
+
+    return fib(n-1) + fib(n-2);
+}
+
 auto main(int argc, char *argv[]) -> int {
-    priority_queue<int> pq(greater<int>);
-    pq.push(3);
-    pq.push(4);
-    pq.push(8);
-    pq.push(1);
-    for(; !pq.empty(); pq.pop()){
-        cout << pq.top() << endl;
+    int n ;
+    cin >> n;
+
+    for(int i = 1; i <= n; i++){
+        cout << fib(i) << " ";
     }
     return 0;
 }
