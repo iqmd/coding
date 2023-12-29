@@ -1,33 +1,70 @@
 #include <bits/stdc++.h>
-#include <cctype>
-#include <climits>
-#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
-    int minCost(string colors, vector<int>& neededTime) {
-
-      int removeTime = 0;
-      for(int i = 1; i < colors.size(); i++){
-        if(colors[i-1] == colors[i]){
-          if(neededTime[i] < neededTime[i-1]){
-            removeTime += neededTime[i];
-            neededTime[i] = neededTime[i-1];
-          }else{
-            removeTime += neededTime[i-1];
-            neededTime[i-1] = neededTime[i];
-          }
-        }
-      }
-      return removeTime;
-
-
-
+    int getLengthOfOptimalCompression(string s, int k) {
+      return solve(0,k,s);
     }
+
+    int solve(int i , int k, string s){
+      if(i == s.length()) return 0;
+
+      int start = i;
+      int length = 1;
+
+      int cmp_length = 0;
+
+      for(int j = i+1; j <= s.length(); j++){
+        if(s[start] != s[j]){
+          if(length <= k){
+            cmp_length = solve(j,k-length,s) + compress(length);
+            cmp_length = min(cmp_length,solve(j,k,s));
+          }else{
+            return compress(length);
+          }
+        }else{
+          length++;
+        }
+
+
+      }
+        return cmp_length;
+    }
+
+    int compress(int count){
+      if(count < 2) return count;
+      if(count < 10) return 2;
+      if(count < 100) return 3;
+      return 4;
+    }
+
 };
 
+    int getCompressedLength(string s){
+      int i = 0;
+      int length = 0;
+      int count =  1;
+      for(int j = i+1; j <= s.length(); j++){
+        if(s[i] != s[j]) {
+          if(count >= 10){
+            length += 3;
+          }else if(count == 1){
+            length += 1;
+          }else if(count == 100){
+            length += 4;
+          }else{
+            length += 2;
+          }
+          i = j;
+          count  = 1;
+        }else{
+          count++;
+        }
+      }
+      return length;
+    }
 
 int main() {
 
@@ -42,20 +79,14 @@ int main() {
 #endif
 
   string s;
-  vector<int> time;
+  int k;
+
 
   cin >> s;
-
-  int e;
-  while(cin >> e ){
-    time.push_back(e);
-  }
+  cin >> k;
 
   Solution sol;
-
-  int result  = sol.minCost(s, time);
-
-  cout <<  result << endl;
-
+  int ans = sol.getLengthOfOptimalCompression(s, k);
+  cout << ans;
   return 0;
 }
