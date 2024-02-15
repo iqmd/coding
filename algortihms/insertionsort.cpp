@@ -24,15 +24,14 @@ int main(){
     read(v,n);
 
     //Insertion sort
-    for(int i=0; i<n; i++){
-        for(int j=i; j >= 0; j--){
-            if(v[j-1] > v[j]){
-                swap(v[j],v[j-1]);
-            }else{
-                break;
-            }
+    for(int i = 1; i < n; i++){
+        int mov = v[i];
+        int j = i-1;
+        while(j >=0 && mov < v[j]){
+            v[j+1] = v[j];
+            j--;
         }
-
+        v[j] = mov;
     }
 
     print(v);

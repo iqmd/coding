@@ -1,6 +1,8 @@
 public class Shape{
     int sides;
-    int perimeter;
 
+    Shape(int side, int perimeter){
+        this.sides = side;
+        this.perimeter = perimeter;
+    }
 }
-

@@ -9,50 +9,57 @@ using ll = int64_t;
 
 #define debug(x) cerr << x <<" "
 
-int findPoss(string str , char c, int i, int n){
-    if( n == 3){
-        return 1;
-    }
-
-    int count = 0;
-    for(int j = i+1; j < str.size(); j++){
-        if(str[j] != c)
-            count += findPoss(str, str[j], j, n+1);
-    }
-
-    return count;
-
-}
 
 void run_case(){
-    string a,b;
-    cin>>a;
-    cin>>b;
+    int n, m, k;
+    cin >> n >> m >> k;
 
-    int count = 0;
-    int maxcount = INT_MIN;
-    for(int i=0; i < a.size(); i++){
-        count += findPoss(a,a[i],i,1);
+    vector<int> a(n);
+    vector<int> b(m);
+    vector<int> result(k+1,0);
+
+    int kby2 =  k/2;
+
+
+    for(auto& e : a){
+        cin >> e;
     }
 
-    maxcount = count;
-    cout <<count<<endl;
-    count = 0;
-
-    for(int i=0; i < b.size(); i++){
-        count += findPoss(b,b[i],i,1);
+    for(auto& e : b){
+        cin >> e;
     }
 
-    maxcount = max(maxcount,count);
+    if(n < kby2 || m < kby2){
+        cout << "NO";
+    }
 
-    cout<< maxcount <<endl;
+    int i = 0;
+    int j = 0;
 
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
+
+    while(i < kby2 || j < kby2){
+
+        if(a[i] < a[j] && i < kby2){
+            i++;
+        }else if(a[i] > a[j]){
+            j++;
+        }
+
+    }
 
 
 }
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
-    run_case();
+    int t;
+    cin >> t;
+
+    while(t--){
+        run_case();
+        cout << endl;
+    }
 
 }

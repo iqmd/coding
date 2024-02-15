@@ -11,6 +11,7 @@ struct Graph {
 };
 
 void addEdges(int s, int d, struct Graph *g);
+
 struct Graph* adjMatrix() {
     int u, v;
     struct Graph* G = malloc(sizeof(struct Graph));
